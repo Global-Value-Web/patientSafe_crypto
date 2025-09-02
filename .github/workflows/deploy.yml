@@ -35,8 +35,8 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASS }}
           script: |
-            IMAGE_NAME=ghcr.io/global-value-web/patientSafe-crypto:latest
+            IMAGE_NAME=ghcr.io/global-value-web/patientsafe-crypto:latest
             docker pull $IMAGE_NAME
-            docker stop patientSafe-crypto || true
-            docker rm patientSafe-crypto || true
-            docker run -d --restart=always -p 6666:6666 --name patientSafe-crypto $IMAGE_NAME
+            docker stop patientsafe-crypto || true
+            docker rm patientsafe-crypto || true
+            docker run -d --restart=always -p 6666:6666 --name patientsafe-crypto $IMAGE_NAME
