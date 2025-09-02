@@ -24,7 +24,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          IMAGE_NAME=ghcr.io/Global-Value-Web/patientSafe_crypto:latest
+          IMAGE_NAME=ghcr.io/Global-Value-Web/patientsafe_crypto:latest
           docker build -t $IMAGE_NAME .
           docker push $IMAGE_NAME
 
